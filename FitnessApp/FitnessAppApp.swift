@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
-struct FitnessAppApp: App {
+struct FitnessApp: App {
+    init() {
+            // Firebase initialization
+            FirebaseApp.configure()
+        }
+        
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
         }
     }
 }
