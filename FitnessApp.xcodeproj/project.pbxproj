@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC40E5782CF53E1400221B75 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40E5772CF53E1400221B75 /* SplashScreen.swift */; };
 		FCA566DB2CF0CEA6003F8DA0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566DA2CF0CEA6003F8DA0 /* FirebaseAnalytics */; };
 		FCA566DD2CF0CEA6003F8DA0 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566DC2CF0CEA6003F8DA0 /* FirebaseAnalyticsOnDeviceConversion */; };
 		FCA566DF2CF0CEA6003F8DA0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566DE2CF0CEA6003F8DA0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC40E5772CF53E1400221B75 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		FCA566AA2CF0CA0B003F8DA0 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA566BA2CF0CA0C003F8DA0 /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA566C42CF0CA0C003F8DA0 /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 		FCA566A12CF0CA0B003F8DA0 = {
 			isa = PBXGroup;
 			children = (
+				FC40E5772CF53E1400221B75 /* SplashScreen.swift */,
 				FCA566AC2CF0CA0B003F8DA0 /* FitnessApp */,
 				FCA566BD2CF0CA0C003F8DA0 /* FitnessAppTests */,
 				FCA566C72CF0CA0C003F8DA0 /* FitnessAppUITests */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC40E5782CF53E1400221B75 /* SplashScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
