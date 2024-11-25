@@ -17,7 +17,7 @@ struct FitnessApp: App {
         
     var body: some Scene {
         WindowGroup {
-            HomePage()
+            SplashScreen()
         }
     }
 }
