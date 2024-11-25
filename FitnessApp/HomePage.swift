@@ -1,11 +1,3 @@
-//
-//  HomePage.swift
-//  FitnessApp
-//
-//  Created by sandra sudheendran on 2024-11-22.
-//
-
-import Foundation
 import SwiftUI
 
 // Workout model
@@ -16,7 +8,6 @@ struct Workout: Identifiable {
     var duration: String
 }
 
-// Home Page displaying workout list
 struct HomePage: View {
     let workouts = [
         Workout(title: "Full Body in 10 Minutes", difficulty: "Beginner", duration: "10 min"),
@@ -50,7 +41,11 @@ struct HomePage: View {
                         
                         Spacer()
                         
-                        NavigationLink(destination: WorkoutDetailView(workout: workout)) {
+                        // Extract duration from the string and convert it to an Int
+                        let workoutDuration = Int(workout.duration.prefix(2)) ?? 0
+                        
+                        // Pass workout and workoutDuration to WorkoutDetailView
+                        NavigationLink(destination: WorkoutDetailView(workout: workout, workoutDuration: workoutDuration)) {
                             Text("Start")
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)

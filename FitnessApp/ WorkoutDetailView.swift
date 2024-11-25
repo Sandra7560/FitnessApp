@@ -1,53 +1,46 @@
-//
-//   WorkoutDetailView.swift
-//  FitnessApp
-//
-//  Created by sandra sudheendran on 2024-11-22.
-//
-
-import Foundation
 import SwiftUI
 
 struct WorkoutDetailView: View {
     var workout: Workout
+    var workoutDuration: Int // Duration passed from HomePage (in minutes)
     
     var body: some View {
-        VStack {
-            Text(workout.title)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-            
-            Text("Difficulty: \(workout.difficulty)")
-                .font(.title2)
-                .padding()
-            
-            Text("Duration: \(workout.duration)")
-                .font(.title2)
-                .padding()
-            
-            Spacer()
-            
-            // Placeholder for workout instructions, video, or timer
-            Text("Instructions and workout details go here...")
-                .font(.body)
-                .padding()
-            
-            Spacer()
-            
-            // Start Workout Button (Can trigger a timer, etc.)
-            Button(action: {
-                // Code to start workout (timer, etc.)
-            }) {
-                Text("Start Workout")
-                    .font(.title2)
-                    .foregroundColor(.white)
+        NavigationView {
+            VStack {
+                Text(workout.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                     .padding()
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                
+                Text("Difficulty: \(workout.difficulty)")
+                    .font(.title2)
+                    .padding()
+                
+                Text("Duration: \(workoutDuration) minutes") // Display duration passed from HomePage
+                    .font(.title2)
+                    .padding()
+                
+                Spacer()
+                
+                // Placeholder for workout instructions
+                Text("Instructions and workout details go here...")
+                    .font(.body)
+                    .padding()
+                
+                Spacer()
+                
+                // Navigation to ExerciseTracking (TimerPage) with workout duration
+                NavigationLink(destination: TimerPage(workoutDuration: workoutDuration)) {
+                    Text("Start Workout")
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding()
             }
-            .padding()
+            .navigationBarTitle(workout.title, displayMode: .inline)
         }
-        .navigationBarTitle(workout.title, displayMode: .inline)
     }
 }
