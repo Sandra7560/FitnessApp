@@ -15,6 +15,7 @@ struct SplashScreen: View {
             HomePage() // Navigate to the HomePage after the splash screen
         } else {
             ZStack {
+                //test akil
                 LinearGradient(
                     gradient: Gradient(colors: [Color.purple, Color.black]),
                     startPoint: .top,
