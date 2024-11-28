@@ -38,17 +38,41 @@ struct WorkoutDetailView: View {
                 
                 Spacer()
                 
-                // Placeholder for workout instructions
-                Text("Instructions and workout details go here...")
-                    .font(.body)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.white.opacity(0.1))
-                    .cornerRadius(12)
-                    .padding(.horizontal)
+//                // Placeholder for workout instructions
+//                Text("Instructions and workout details go here...")
+//                    .font(.body)
+//                    .foregroundColor(.white)
+//                    .padding()
+//                    .background(Color.white.opacity(0.1))
+//                    .cornerRadius(12)
+//                    .padding(.horizontal)
+                Image("image1.jpeg") // Replace with the actual image name
+                             .resizable()
+                             .scaledToFit()
+                             .frame(height: 200)
+                             .cornerRadius(12)
+//                             .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 2)
+                             .padding(.horizontal)
                 
                 Spacer()
-                
+//                 Video Link Button
+//                Link(destination: URL(string: "https://youtu.be/UIPvIYsjfpo?si=ykdXIzILMfjVjt_6")!) {
+//                    Text("Watch Video Tutorial")
+//                        .font(.title2)
+//                        .foregroundColor(.white)
+//                        .padding(.vertical, 12)
+//                        .padding(.horizontal, 24)
+//                        .background(
+//                            LinearGradient(
+//                                gradient: Gradient(colors: [Color.blue, Color.green]),
+//                                startPoint: .leading,
+//                                endPoint: .trailing
+//                            )
+//                        )
+//                        .cornerRadius(10)
+//                        .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 3)
+//                }
+
                 // Navigation to ExerciseTracking (TimerPage) with workout duration
                 NavigationLink(destination: TimerPage(workoutDuration: workoutDuration)) {
                     Text("Start Workout")
@@ -73,3 +97,4 @@ struct WorkoutDetailView: View {
         .navigationBarTitle(workout.title, displayMode: .inline)
     }
 }
+

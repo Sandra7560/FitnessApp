@@ -44,14 +44,14 @@ struct HomePage: View {
                                     HStack {
                                         Text(workout.difficulty)
                                             .font(.subheadline)
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(.black)
                                         
                                         Text("|")
                                             .foregroundColor(.gray)
                                         
                                         Text(workout.duration)
                                             .font(.subheadline)
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(.black)
                                     }
                                 }
                                 
