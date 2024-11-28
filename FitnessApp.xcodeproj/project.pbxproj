@@ -15,6 +15,7 @@
 		FCA566E32CF0CEA6003F8DA0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566E22CF0CEA6003F8DA0 /* FirebaseAuth */; };
 		FCA566E52CF0CEA6003F8DA0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566E42CF0CEA6003F8DA0 /* FirebaseFirestore */; };
 		FCA566E72CF0CEA6003F8DA0 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566E62CF0CEA6003F8DA0 /* FirebaseFirestoreCombine-Community */; };
+		FCB0C11C2CF8B74300CADE2E /* AdminDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0C11B2CF8B74300CADE2E /* AdminDashboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		FCA566AA2CF0CA0B003F8DA0 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA566BA2CF0CA0C003F8DA0 /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA566C42CF0CA0C003F8DA0 /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB0C11B2CF8B74300CADE2E /* AdminDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -94,6 +96,7 @@
 		FCA566A12CF0CA0B003F8DA0 = {
 			isa = PBXGroup;
 			children = (
+				FCB0C11B2CF8B74300CADE2E /* AdminDashboard.swift */,
 				FC40E5772CF53E1400221B75 /* SplashScreen.swift */,
 				FCA566AC2CF0CA0B003F8DA0 /* FitnessApp */,
 				FCA566BD2CF0CA0C003F8DA0 /* FitnessAppTests */,
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC40E5782CF53E1400221B75 /* SplashScreen.swift in Sources */,
+				FCB0C11C2CF8B74300CADE2E /* AdminDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
