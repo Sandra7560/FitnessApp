@@ -1,6 +1,7 @@
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
-// Workout model
 struct Workout: Identifiable {
     var id = UUID()
     var title: String
@@ -15,6 +16,8 @@ struct HomePage: View {
         Workout(title: "Leg Day Challenge", difficulty: "Advanced", duration: "20 min")
     ]
     
+    @State private var navigateToSignIn = false  // State to trigger navigation to SignIn view
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -91,12 +94,53 @@ struct HomePage: View {
                     // Reminder Button
                     NavigationLink(destination: ReminderPage()) {
                         Text("Set Workout Reminders")
-                            .font(.title2)
+                            .font(.headline)
                             .foregroundColor(.white)
                             .padding()
                             .background(
                                 LinearGradient(
                                     gradient: Gradient(colors: [Color.blue, Color.green]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            )
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 3)
+                    }
+                    .padding(.bottom, 20)
+                    
+                    // Logout Button
+                    Button(action: signOut) {
+                        Text("Logout")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.red, Color.orange]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            )
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 3)
+                    }
+                    .padding(.bottom, 20)
+                    .background(
+                        NavigationLink(destination: SignInView(), isActive: $navigateToSignIn) {
+                            EmptyView()
+                        }
+                    )
+                    
+                    // Profile Button
+                    NavigationLink(destination: ProfileView()) {
+                        Text("Go to Profile")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.purple, Color.blue]),
                                     startPoint: .leading,
                                     endPoint: .trailing
                                 )
@@ -111,9 +155,19 @@ struct HomePage: View {
         }
         .navigationBarHidden(true) // Hides the default navigation bar
     }
+
+    private func signOut() {
+        do {
+            try Auth.auth().signOut()
+            navigateToSignIn = true // Trigger navigation to SignIn view after logout
+        } catch {
+            print("Error logging out: \(error.localizedDescription)")
+        }
+    }
 }
 
-// Preview
-#Preview {
-    HomePage()
+struct HomePage_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePage()
+    }
 }
