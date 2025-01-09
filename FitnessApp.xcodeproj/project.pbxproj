@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2D87022D305D3C0091D107 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D87012D305D3C0091D107 /* SignInView.swift */; };
+		FC2D87042D305D9F0091D107 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D87032D305D9F0091D107 /* SignUpView.swift */; };
+		FC2D87062D305EF00091D107 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FC2D87052D305EF00091D107 /* FirebaseAuth */; };
+		FC2D87082D305EF00091D107 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FC2D87072D305EF00091D107 /* FirebaseCore */; };
+		FC2D870A2D305EF00091D107 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FC2D87092D305EF00091D107 /* FirebaseDatabase */; };
 		FC40E5782CF53E1400221B75 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC40E5772CF53E1400221B75 /* SplashScreen.swift */; };
 		FCA566DB2CF0CEA6003F8DA0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566DA2CF0CEA6003F8DA0 /* FirebaseAnalytics */; };
 		FCA566DD2CF0CEA6003F8DA0 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = FCA566DC2CF0CEA6003F8DA0 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -36,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC2D87012D305D3C0091D107 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FC2D87032D305D9F0091D107 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		FC40E5772CF53E1400221B75 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		FCA566AA2CF0CA0B003F8DA0 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA566BA2CF0CA0C003F8DA0 /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +79,8 @@
 				FCA566DF2CF0CEA6003F8DA0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				FCA566DD2CF0CEA6003F8DA0 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				FCA566E52CF0CEA6003F8DA0 /* FirebaseFirestore in Frameworks */,
+				FC2D870A2D305EF00091D107 /* FirebaseDatabase in Frameworks */,
+				FC2D87082D305EF00091D107 /* FirebaseCore in Frameworks */,
 				FCA566E72CF0CEA6003F8DA0 /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2D87062D305EF00091D107 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +108,8 @@
 			children = (
 				FCB0C11B2CF8B74300CADE2E /* AdminDashboard.swift */,
 				FC40E5772CF53E1400221B75 /* SplashScreen.swift */,
+				FC2D87012D305D3C0091D107 /* SignInView.swift */,
+				FC2D87032D305D9F0091D107 /* SignUpView.swift */,
 				FCA566AC2CF0CA0B003F8DA0 /* FitnessApp */,
 				FCA566BD2CF0CA0C003F8DA0 /* FitnessAppTests */,
 				FCA566C72CF0CA0C003F8DA0 /* FitnessAppUITests */,
@@ -142,6 +154,8 @@
 				FCA566E22CF0CEA6003F8DA0 /* FirebaseAuth */,
 				FCA566E42CF0CEA6003F8DA0 /* FirebaseFirestore */,
 				FCA566E62CF0CEA6003F8DA0 /* FirebaseFirestoreCombine-Community */,
+				FC2D87072D305EF00091D107 /* FirebaseCore */,
+				FC2D87092D305EF00091D107 /* FirebaseDatabase */,
 			);
 			productName = FitnessApp;
 			productReference = FCA566AA2CF0CA0B003F8DA0 /* FitnessApp.app */;
@@ -165,6 +179,7 @@
 			);
 			name = FitnessAppTests;
 			packageProductDependencies = (
+				FC2D87052D305EF00091D107 /* FirebaseAuth */,
 			);
 			productName = FitnessAppTests;
 			productReference = FCA566BA2CF0CA0C003F8DA0 /* FitnessAppTests.xctest */;
@@ -269,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2D87022D305D3C0091D107 /* SignInView.swift in Sources */,
 				FC40E5782CF53E1400221B75 /* SplashScreen.swift in Sources */,
+				FC2D87042D305D9F0091D107 /* SignUpView.swift in Sources */,
 				FCB0C11C2CF8B74300CADE2E /* AdminDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +623,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FC2D87052D305EF00091D107 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCA566D92CF0CEA6003F8DA0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FC2D87072D305EF00091D107 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCA566D92CF0CEA6003F8DA0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		FC2D87092D305EF00091D107 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCA566D92CF0CEA6003F8DA0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		FCA566DA2CF0CEA6003F8DA0 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FCA566D92CF0CEA6003F8DA0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
