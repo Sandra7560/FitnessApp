@@ -12,7 +12,7 @@ struct SplashScreen: View {
     
     var body: some View {
         if isActive {
-            HomePage() // Navigate to the HomePage after the splash screen
+            SignInView()// Navigate to the HomePage after the splash screen
         } else {
             ZStack {
                 //test akil

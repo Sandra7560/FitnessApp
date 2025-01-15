@@ -97,4 +97,3 @@ struct WorkoutDetailView: View {
         .navigationBarTitle(workout.title, displayMode: .inline)
     }
 }
-
